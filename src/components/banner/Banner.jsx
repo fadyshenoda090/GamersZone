@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function Banner({ game }) {
 
-  return <div className='relative'>
+  return <div className='relative p-1'>
     <div className='absolute bottom-0 p-5 bg-gradient-to-t from-slate-900 to to-transparent w-full'>
     
       <h2 className='game-name text-3xl bg-gradient-to-t from-orange-100 via-red-600 to-yellow-00 RockSalt'>

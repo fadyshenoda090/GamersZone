@@ -27,7 +27,7 @@ function App() {
 
   return (
     <ThemeProvider value={{theme, setTheme}}>
-      <div className={`${theme} ${theme=="dark" ? 'bg-[#121212]': ''} m-h-[100vh]`}>
+      <div className={`${theme} ${theme=="dark" ? 'bg-slate-900': ''} m-h-[100vh]`}>
         <RouterProvider router={router}/>
       </div>
     </ThemeProvider>

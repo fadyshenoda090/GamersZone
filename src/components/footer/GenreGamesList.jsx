@@ -3,11 +3,11 @@ import { TiStarFullOutline } from "react-icons/ti";
 import { FaComment } from "react-icons/fa";
 import { FaFire } from "react-icons/fa6";
 
-const GenreGamesList = ({ games }) => {
+const GenreGamesList = ({ games, selectedGenreName }) => {
   return (
     <>
-      <h2 className='mt-5 font-bold text-3xl Bungee hidden md:block'>Popular Games</h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-2'>
+      <h2 className='mt-5 font-bold text-3xl Bungee hidden md:block px-1'>{selectedGenreName} Games</h2>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 p-1'>
         {
           games.map((game, index) => (
             <div key={index} className='flex flex-col rounded-lg bg-gray-800
