@@ -1,11 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
-    font-family: font;
+    font-family: 'bungee';
     src: url('./assets/BungeeSpice-Regular.ttf');
 }
 
-*{
-    font-family: font;
+@font-face {
+    font-family: 'rubbik';
+    src: url('./assets/RubikBurned-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('./assets/RockSalt-Regular.ttf');
+}
+
+/* * {
+    font-family: 'bungee', 'Rubik Burned', sans-serif;
+} */
+.Bungee{
+    font-family: 'bungee';
+}
+
+.Rubik{
+    font-family: 'rubbik';
+}
+
+.RockSalt{
+    font-family: 'rockSalt';
+}
+
+.game-name {
+    font-weight: bold;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }

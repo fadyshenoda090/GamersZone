@@ -33,11 +33,11 @@ const GenresList = () => {
         </div>
       ) : (
         <>
-          <h1 className='text-2xl'>Genres</h1>
+          <h1 className='text-2xl ms-5 my-2 Bungee'>Genres</h1>
           {genres.map((genre,index) => (
             <div
             onClick={() => setActiveIndex(index)}
-            key={index} className={`${activeIndex==index? 'bg-gray-400 dark:bg-gray-400': ''} flex justify-start gap-3 cursor-pointer hover:bg-gray-300 hover:dark:bg-white p-2 rounded-lg group`}>
+            key={index} className={`Bungee ${activeIndex==index? 'bg-gray-400 dark:bg-gray-400': ''} mb-1 ms-5 flex justify-start gap-3 cursor-pointer hover:bg-gray-300 hover:dark:bg-white p-1 rounded-lg group`}>
               <img className={`my-2 rounded-lg object-cover group-hover:scale-110 transition-all ease-in-out duration-500 ${activeIndex ==index ? 'scale-110' :''}`} src={genre.image_background} alt="Genre logo" style={{ width: "3rem", height: "3rem" }} />
               <h3 className={`mt-4 group-hover:text-xl transition-all ease-in-out duration-700 ${activeIndex ==index ? 'text-xl':''}`}>{genre.name}</h3>
             </div>
