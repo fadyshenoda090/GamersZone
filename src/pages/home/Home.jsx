@@ -77,16 +77,16 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div className='grid grid-cols-4 px-5'>
-          <div className='h-full hidden md:block'>
+        <div className='grid grid-cols-5 px-5'>
+          <header className='h-full hidden md:block'>
             <GenresList
               genreId={(genreId) => {
                 getGamesByGenre(genreId);
               }}
               selectedGenreName={(NAME) => setSelectedGenreName(NAME)}
             />
-          </div>
-          <div className='md:col-span-3 col-span-4'>
+          </header>
+          <main className='md:col-span-4 col-span-5'>
             {list.length > 0 && genreGamesList.length > 0 ? (
               <div>
                 <Banner game={list[random]} />
@@ -94,7 +94,7 @@ const Home = () => {
                 <GenreGamesList games={genreGamesList} selectedGenreName={selectedGenreName}/>
               </div>
             ) : null}
-          </div>
+          </main>
         </div>
       )}
     </div>
