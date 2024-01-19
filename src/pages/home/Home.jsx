@@ -35,6 +35,7 @@ const Home = () => {
     try {
       const response = await axiosInstance.get('/games');
       setList(response.data.results);
+      console.log('response', response.data.results);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching games:', error);

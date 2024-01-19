@@ -6,6 +6,7 @@ import AppLayOut from './appLayout/AppLayOut'
 import Error from './pages/error/Error'
 import NotFound from './pages/notFound/NotFound'
 import { ThemeProvider, themeContext } from './contexts/ThemeContext'
+import Details from './pages/details/Details'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     element: <AppLayOut />,
     children: [
       {index: true, element: <Home />, errorElement: <Error/>},
+      { path: '/details/:id', element: <Details />, errorElement: <Error /> },
       {path: "*", element: <NotFound/>}
     ]
   }

@@ -4,13 +4,16 @@ import { HiOutlineMagnifyingGlass, HiMoon } from "react-icons/hi2";
 import { HiSun } from "react-icons/hi";
 import { themeContext } from '../../contexts/ThemeContext';
 import axiosInstance from '../../axiosConfig/axiosInstance';
+import { useNavigate } from 'react-router-dom';
 
 
 function Header() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const { theme, setTheme } = useContext(themeContext);
   const [games, setGames] = useState([]);
   const [searchResults, setSearchResults] = useState([]);useEffect(() => {
+    
     const getGamesList = async () => {
       try {
         const response = await axiosInstance.get(`/games?search=${searchQuery}`);
@@ -50,8 +53,8 @@ function Header() {
   
   
   return (
-    <div className='flex items-center p-2 relative'>
-    <img src={logo} alt="logo" style={{ height: "5rem", width: "7rem" }} />
+    <div className='flex items-center p-2 relative h-fit'>
+    <img onClick={()=>{navigate('/')}} src={logo} alt="logo" style={{ height: "5rem", width: "7rem", cursor:"pointer" }} />
     <div className={`flex ${theme === 'light' ? 'bg-slate-200' : 'bg-white'} p-2 w-full items-center me-1 rounded-full`}>
       <HiOutlineMagnifyingGlass className='me-1' />
       <input type="text" placeholder='Search For Games' value={searchQuery} onChange={(e) => handelSerch(e)} className='w-full bg-transparent outline-none px-2' />
